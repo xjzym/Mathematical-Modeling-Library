@@ -74,13 +74,4 @@ python lstm_template.py --config config_mcm2025C.json            # 完整训练 
 
 落地工具：`python metrics_utils.py --demo`（自动输出审计表、权重对照、$\lambda$ 建议、死项检测、一致性检查表）。
 
-## 相关模型编号
 
-| 编号 | 模型 | 与本模型的关系 |
-|---|---|---|
-| **01** | **LSTM 时序趋势建模** | 本目录 |
-| 02 | XGBoost-Bootstrap 区间预测 | **消费本模型输出的趋势值** |
-| 03 | PCA 主成分（3.1.1） | 与趋势值并列的输入特征 |
-| 04 | Spearman + SHAP 归因 | 解释小项与奖牌的关系 |
-| 05 | DID 因果（伟大教练效应） | 独立的因果支线 |
-| 06 | Bootstrap + 符号秩检验（零的突破） | 消费 02 的 Bootstrap 样本矩阵 |
