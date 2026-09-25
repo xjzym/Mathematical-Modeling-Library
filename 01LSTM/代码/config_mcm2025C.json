@@ -1,0 +1,69 @@
+{
+  "name": "MCM2025C-LSTM-3.1.2",
+  "data": {
+    "panel_csv": "../../mcm2025C/2025_Problem_C_Data/2025_Problem_C_Data/summerOly_medal_counts.csv",
+    "entity_col": "NOC",
+    "year_col": "Year",
+    "target_cols": ["Gold", "Total"],
+    "entity_merge_map": {
+      "Soviet Union": "Russia",
+      "Unified Team": "Russia",
+      "ROC": "Russia",
+      "United Team of Germany": "Germany",
+      "West Germany": "Germany",
+      "East Germany": "Germany",
+      "Czechoslovakia": "Czech Republic",
+      "Yugoslavia": "Serbia",
+      "FR Yugoslavia": "Serbia",
+      "Serbia and Montenegro": "Serbia",
+      "Formosa": "Chinese Taipei",
+      "Taiwan": "Chinese Taipei"
+    },
+    "drop_entities": [
+      "Independent Olympic Participants",
+      "Independent Olympic Athletes",
+      "Refugee Olympic Team",
+      "Mixed team",
+      "Australasia",
+      "British West Indies",
+      "Netherlands Antilles"
+    ],
+    "start_year": 1952,
+    "min_records": 5,
+    "host_csv": "../../mcm2025C/2025_Problem_C_Data/2025_Problem_C_Data/summerOly_hosts.csv",
+    "host_year_col": "Year",
+    "host_entity_col": "Host",
+    "host_name_map": { "United Kingdom": "Great Britain" },
+    "prep_window": 8
+  },
+  "features": {
+    "use_event_channel": true,
+    "use_alpha": true,
+    "alpha_basis_col": "Gold",
+    "n_steps": 3
+  },
+  "split": {
+    "val_target_years": [2020, 2024],
+    "predict_years": [2028]
+  },
+  "model": {
+    "hidden_size": 32,
+    "dropout": 0.2,
+    "lambda_medal": 0.7,
+    "lambda_host": 0.3,
+    "host_bias_init": null,
+    "fc_hidden": 64
+  },
+  "train": {
+    "epochs": 200,
+    "patience": 6,
+    "lr": 0.001,
+    "batch": 16,
+    "weight_decay": 0.00001,
+    "seeds": [0, 1, 2, 3, 4],
+    "select": "best",
+    "threads": 4
+  },
+  "metrics": { "wmae_weight_col": "Gold" },
+  "output_dir": "模板自检输出"
+}

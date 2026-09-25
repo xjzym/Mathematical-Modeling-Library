@@ -1,0 +1,17 @@
+# 【模型 01 · LSTM】依赖清单
+# 安装：python -m pip install -r requirements.txt
+#
+# 深度学习框架（CPU 版即可，本模型样本量小，GPU 无收益）
+# 若需 GPU：把下面的 index-url 换成 https://download.pytorch.org/whl/cu124
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+
+# 数据处理与绘图
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+
+# 说明：
+# 1) 环境实测版本：Python 3.13.5 + torch 2.14.0+cpu + numpy/pandas/matplotlib（2026-09）
+# 2) 训练在 CPU 上单次约 4–5 秒（5 种子 × 早停 ~15 epoch），无需 GPU
+# 3) 若只想做数据自检（--dry-run），不装 torch 也能运行

@@ -1,0 +1,41 @@
+{
+  "生成时间": "2026-09-25 14:35:25",
+  "文件": [
+    {
+      "文件名": "base_panel_country_year.csv",
+      "行数": 1558,
+      "字节": 49864,
+      "sha256": "0308994fb426b001a2b03c6010bf6bc36f17e1340673f212e6e0a59896d92338"
+    },
+    {
+      "文件名": "host_years_by_country.csv",
+      "行数": 82,
+      "字节": 1339,
+      "sha256": "4fc262572a9e33f8e228f71a258cb961f6ddf44f45e8b16e38828268640b3585"
+    },
+    {
+      "文件名": "lstm_metrics.csv",
+      "行数": 1,
+      "字节": 2578,
+      "sha256": "b72038eaec992bde7751e7f480f62246e078eaa93a7a3601404bf7ccf4d283a9"
+    },
+    {
+      "文件名": "lstm_run_config.json",
+      "行数": null,
+      "字节": 1923,
+      "sha256": "5f10f3d6bdcece08ec55e8622da035c1a9a5b3e60284cd35ad2f916a13de2f09"
+    },
+    {
+      "文件名": "lstm_trend_2028.csv",
+      "行数": 82,
+      "字节": 8887,
+      "sha256": "02a7082a44202ec2fd1ba1cdd78f92b4a4dc6354f550e308172052d6c1c7b060"
+    },
+    {
+      "文件名": "lstm_trend_history.csv",
+      "行数": 1312,
+      "字节": 171538,
+      "sha256": "957a5b9976d8650e4b24d2205ab5d733fa4cfc4425a76e46a751741d4240c29a"
+    }
+  ]
+}
